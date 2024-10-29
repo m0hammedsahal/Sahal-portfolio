@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mhd</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <style>
+        /* New Typing Animation */
+        .typing::after {
+            content: '';
+            border-right: .15em solid #ff6347; /* Orange cursor */
+            animation: blink 0.7s steps(40) infinite;
+        }
+
+        .typing {
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: .15em solid transparent;
+            animation: typing 3.5s steps(40) 1s 1 normal both, blink .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+            100% { border-color: #ff6347; }
+        }
+
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        /* Fix for Swiper slide sizing */
+        .swiper-slide {
+            width: 100%;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100">
+
+<!-- Header -->
+<header class="px-6 bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 text-white p-5 flex justify-between items-center shadow-lg">
+    <h1 class="text-xl sm:text-3xl lg:text-4xl font-bold">Mhd</h1>
+    <nav class="hidden md:flex">
+        <a href="#about" class="mx-2 lg:mx-4 hover:text-gray-900">About</a>
+        <a href="#skills" class="mx-2 lg:mx-4 hover:text-gray-900">Skills</a>
+        <a href="#projects" class="mx-2 lg:mx-4 hover:text-gray-900">Projects</a>
+        <a href="#contact" class="mx-2 lg:mx-4 hover:text-gray-900">Contact</a>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="h-screen bg-cover bg-center relative" style="background-image: url('hero-image.jpg');">
+    <div class="flex justify-center items-center h-full bg-black bg-opacity-60">
+        <div class="text-center text-white">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 fade-in">Hi, I'm</h2>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold typing" style="color: #ff6347;">Full Stack Developer</h2>
+            <p class="text-lg sm:text-xl mt-4 fade-in">Crafting beautiful, responsive websites</p>
+        </div>
+    </div>
+</section>
+
+<!-- Swiper Slide for Projects -->
+<section id="projects" class="px-6 my-10 lg:my-20 px-6 sm:px-10">
+    <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-10 text-purple-700">Featured Projects</h3>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide bg-gradient-to-r from-yellow-300 to-red-300 rounded-lg shadow-lg p-4 sm:p-6" style="height: 500px;">
+                <img src="/static/images/Untitled design (1).png" alt="Project 1" class="rounded-md w-full max-h-48 object-cover mb-2 sm:mb-4">
+                <h4 class="text-lg sm:text-2xl font-bold">Food Delivery App</h4>
+                <p class="text-gray-800 text-sm sm:text-base mt-2">A full-featured web app designed for food ordering and delivery. Users can browse nearby restaurants, add items to the cart, apply discounts, and track orders in real-time. Built with Django for backend functionality and a dynamic UI.</p>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide bg-gradient-to-r from-green-300 to-blue-300 rounded-lg shadow-lg p-4 sm:p-6" style="height: 500px;">
+                <img src="/static/images/Untitled design.png" alt="Project 2" class="rounded-md w-full max-h-48 object-cover mb-2 sm:mb-4">
+                <h4 class="text-lg sm:text-2xl font-bold">Blogger Web App</h4>
+                <p class="text-gray-800 text-sm sm:text-base mt-2">A responsive blogging platform built with Django, allowing users to create, edit, and share blog posts. The platform features an intuitive UI and modern styling for a seamless user experience.</p>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide bg-gradient-to-r from-indigo-300 to-pink-300 rounded-lg shadow-lg p-4 sm:p-6" style="height: 500px;">
+                <img src="/static/images/Untitled design (3).png" alt="Project 3" class="rounded-md w-full max-h-48 object-cover mb-2 sm:mb-4">
+                <h4 class="text-lg sm:text-2xl font-bold">Interior Design Company Website</h4>
+                <p class="text-gray-800 text-sm sm:text-base mt-2">A sleek, responsive website showcasing interior design projects and services. Built with Django and Tailwind CSS, it provides a visually appealing user experience, featuring project galleries, service details, and client testimonials.</p>
+            </div>
+        </div>
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    
+</section>
+
+<!-- About Section -->
+<section id="about" class="px-6 py-10 sm:py-20 bg-pink-100">
+    <div class="max-w-5xl mx-auto text-center">
+        <h3 class="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-blue-900">About Me</h3>
+        <p class="text-base sm:text-lg text-gray-800 fade-in">I am a passionate full stack developer skilled in Python, Django, and JavaScript. I create dynamic web apps and focus on user-centered design with seamless functionality.</p>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="px-6 py-10 sm:py-20 bg-blue-100">
+    <div class="max-w-5xl mx-auto text-center">
+        <h3 class="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-green-900">My Skills</h3>
+        <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+            <!-- Third row of skills (reversed) -->
+            <div class="p-6 bg-gradient-to-br from-green-300 to-blue-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">React</h4>
+            </div>
+            <div class="p-6 bg-gradient-to-br from-red-300 to-yellow-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">API</h4>
+            </div>
+            <div class="p-6 bg-gradient-to-br from-purple-300 to-pink-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">Shopify</h4>
+            </div>
+            <div class="p-6 bg-gradient-to-br from-blue-300 to-green-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">GitHub</h4>
+            </div>
+        
+            <!-- Second row of skills (reversed) -->
+            <div class="p-6 bg-gradient-to-br from-red-300 to-yellow-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">SQL</h4>
+            </div>
+            <div class="p-6 bg-gradient-to-br from-purple-300 to-pink-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">JQuery</h4>
+            </div>
+            <div class="p-6 bg-gradient-to-br from-blue-300 to-green-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">Django</h4>
+            </div>
+            <div class="p-6 bg-gradient-to-br from-yellow-300 to-red-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">Python</h4>
+            </div>
+        
+            <!-- First row of skills (reversed) -->
+            <div class="p-6 bg-gradient-to-br from-red-300 to-yellow-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">HTML & CSS</h4>
+            </div>
+            <div class="p-6 bg-gradient-to-br from-purple-300 to-pink-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">JavaScript</h4>
+            </div>
+            <div class="p-6 bg-gradient-to-br from-blue-300 to-green-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">Tailwind CSS</h4>
+            </div>
+            <div class="p-6 bg-gradient-to-br from-yellow-300 to-red-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">Bootstrap</h4>
+            </div>
+        
+            <!-- Additional skill -->
+            
+        </div>
+        
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="px-6 py-10 sm:py-20 bg-indigo-100">
+    <div class="max-w-5xl mx-auto text-center">
+        <h3 class="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-pink-900">Get in Touch</h3>
+        <form action="/submit_contact" method="POST" class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            <input type="text" name="name" placeholder="Your Name" class="p-3 sm:p-4 rounded-lg bg-white border border-gray-300 focus:outline-none">
+            <input type="email" name="email" placeholder="Your Email" class="p-3 sm:p-4 rounded-lg bg-white border border-gray-300 focus:outline-none">
+            <textarea name="message" placeholder="Your Message" rows="5" class="sm:col-span-2 p-3 sm:p-4 rounded-lg bg-white border border-gray-300 focus:outline-none"></textarea>
+            <button type="submit" class="sm:col-span-2 bg-gradient-to-r from-purple-400 to-blue-400 text-white py-3 rounded-lg hover:bg-blue-500 transition duration-300">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            spaceBetween: 30, // Adds gap between slides
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+    });
+</script>
+</body>
+</html>
