@@ -1,199 +1,283 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Mhd Sahal</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <style>
-        /* New Typing Animation */
-        .typing::after {
-            content: '';
-            border-right: .15em solid #ff6347; /* Orange cursor */
-            animation: blink 0.7s steps(40) infinite;
-        }
+<html lang="en" class="no-js">
+	<title>Portfolio website</title>
+	<meta name="author" content="Amit Bajracharya">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+	
 
-        .typing {
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: .15em solid transparent;
-            animation: typing 3.5s steps(40) 1s 1 normal both, blink .75s step-end infinite;
-        }
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.js"></script>
 
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
+    <link class="logo" rel="icon" type="image/png" href="./images/rounded_logo.png">
+	
 
-        @keyframes blink {
-            50% { border-color: transparent; }
-            100% { border-color: #ff6347; }
-        }
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/fontawesome/css/font-awesome.css">
+	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-        /* Fade-in animation */
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 2s forwards;
-        }
 
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
+	<link rel="stylesheet" href="assets/gridloading/css/component.css">
+	<link rel="stylesheet" href="assets/animate.css" >
+	<link rel="stylesheet" href="style.css">
 
-        /* Fix for Swiper slide sizing */
-        .swiper-slide {
-            width: 100%;
-            flex-shrink: 0;
-        }
-    </style>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+	
+	
+
+	
 </head>
-<body class="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100">
+<body>
 
-<!-- Header -->
-<header class="px-6 bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 text-white p-5 flex justify-between items-center shadow-lg">
-    <h1 class="text-xl sm:text-3xl lg:text-4xl font-bold">Mhd Sahal</h1>
-    <nav class="hidden md:flex">
-        <a href="#about" class="mx-2 lg:mx-4 hover:text-gray-900">About</a>
-        <a href="#skills" class="mx-2 lg:mx-4 hover:text-gray-900">Skills</a>
-        <a href="#projects" class="mx-2 lg:mx-4 hover:text-gray-900">Projects</a>
-        <a href="#contact" class="mx-2 lg:mx-4 hover:text-gray-900">Contact</a>
-    </nav>
-</header>
+<!-- header -->
+<div id="top" class="header-bg fullpage">
+<div class="header fullpage">
+	<div class="container">
+		<div class="absolute-center">
+		<div class="row">
+			<div class="col-sm-7">
+				<h1 class="info animated fadeInDown">
+					<a href="" class="logo">Hi<br>I am <u>Mhd Sahal</u></a><br>
+					<b>Python <span>Full Stack Developer</span></b>
+				</h1>
+								
+				<a href="#works" class="btn scroll animated bounceInUp">View My Works</a><a href="#contact" class="btn scroll animated bounceInDown">Contact</a>
+			</div>
+			<div class="col-sm-4 col-sm-offset-1">
+				<div class="connect-icon">
+						
+					<div class="prof-links clearfix animated bounceInUp">
+						<a href="https://www.linkedin.com/in/mhd-sahal-5a9b0128a/" target="_blank" class="white-icon linkedin-gradient block mb-4"><i class="fab fa-linkedin fa-2x"></i></a>
+						<a href="https://github.com/m0hammedsahal" target="_blank" class="github-gradient white-icon block mb-4"><i class="fab fa-github fa-2x"></i></a>
+						<a href="https://drive.google.com/file/d/1uH95sd6jvC7iMTtFepwIb2JB4K8VD0Wm" target="_blank" class="cv-gradient white-icon block mb-4"><i class="fas fa-file-pdf fa-2x"></i></a>
+					</div>
+					
+						
+						
+					<br>
+					<div class="social  clearfix  animated bounceInDown">
+					<a href="https://wa.me/+918075659325" target="_blank" class="whatsapp-icon">
+						<i class="fab fa-whatsapp fa-2x"></i>
+					</a>
+					<a class="facebook-icon" href="https://www.facebook.com/sa_a_l_k"><img alt="portfolio" src="images/facebook.png" width="32"></a>
+					<a class="instagram-icon" href="https://www.instagram.com/_zola_x_/"><img alt="portfolio" src="images/instagram.png"  width="32"></a>
+					<a class="twitter-icon" href="https://x.com/sa_a_l_k"><img alt="portfolio" src="images/twitter.png"  width="32"></a>				
+					
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- header -->
 
-<!-- Hero Section -->
-<section class="h-screen bg-cover bg-center relative" style="background-image: url('hero-image.jpg');">
-    <div class="flex justify-center items-center h-full bg-black bg-opacity-60">
-        <div class="text-center text-white">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 fade-in">Hi, I'm</h2>
-            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold typing" style="color: #ff6347;">Full Stack Developer</h2>
-            <p class="text-lg sm:text-xl mt-4 fade-in">Crafting beautiful, responsive websites</p>
-        </div>
-    </div>
-</section>
 
-<!-- Swiper Slide for Projects -->
-<section id="projects" class="px-6 my-10 lg:my-20 px-6 sm:px-10">
-    <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-10 text-purple-700">Featured Projects</h3>
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide bg-gradient-to-r from-yellow-300 to-red-300 rounded-lg shadow-lg p-4 sm:p-6" style="height: 500px;">
-                <img src="/images/Untitled design (1).png" alt="Project 1" class="rounded-md w-full max-h-48 object-cover mb-2 sm:mb-4">
-                <h4 class="text-lg sm:text-2xl font-bold">Food Delivery App</h4>
-                <p class="text-gray-800 text-sm sm:text-base mt-2">A full-featured web app designed for food ordering and delivery. Users can browse nearby restaurants, add items to the cart, apply discounts, and track orders in real-time. Built with Django for backend functionality and a dynamic UI.</p>
-            </div>
-            <!-- Slide 2 -->
-            <div class="swiper-slide bg-gradient-to-r from-green-300 to-blue-300 rounded-lg shadow-lg p-4 sm:p-6" style="height: 500px;">
-                <img src="/images/Untitled design.png" alt="Project 2" class="rounded-md w-full max-h-48 object-cover mb-2 sm:mb-4">
-                <h4 class="text-lg sm:text-2xl font-bold">Blogger Web App</h4>
-                <p class="text-gray-800 text-sm sm:text-base mt-2">A responsive blogging platform built with Django, allowing users to create, edit, and share blog posts. The platform features an intuitive UI and modern styling for a seamless user experience.</p>
-            </div>
-            <!-- Slide 3 -->
-            <div class="swiper-slide bg-gradient-to-r from-indigo-300 to-pink-300 rounded-lg shadow-lg p-4 sm:p-6" style="height: 500px;">
-                <img src="/images/Untitled design (3).png" alt="Project 3" class="rounded-md w-full max-h-48 object-cover mb-2 sm:mb-4">
-                <h4 class="text-lg sm:text-2xl font-bold">Interior Design Company Website</h4>
-                <p class="text-gray-800 text-sm sm:text-base mt-2">A sleek, responsive website showcasing interior design projects and services. Built with Django and Tailwind CSS, it provides a visually appealing user experience, featuring project galleries, service details, and client testimonials.</p>
-            </div>
-        </div>
-        <!-- Pagination -->
-        <div class="swiper-pagination"></div>
-    </div>
+<div class="content-body">
+	
     
-</section>
 
-<!-- About Section -->
-<section id="about" class="px-6 py-10 sm:py-20 bg-pink-100">
-    <div class="max-w-5xl mx-auto text-center">
-        <h3 class="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-blue-900">About Me</h3>
-        <p class="text-base sm:text-lg text-gray-800 fade-in">I am a passionate full stack developer skilled in Python, Django, and JavaScript. I create dynamic web apps and focus on user-centered design with seamless functionality.</p>
-    </div>
-</section>
+<!-- works -->
+<div id="works" class="portfolio spacer">
+	<div class="container">
+		<h2 class="center">Works</h2>
 
+		<ul class="grid effect-2" id="grid">
+			<li><img alt="portfolio" src="./images/Untitled design (1).png"><div class="overlay animated fadeIn"><span class="animated bounceIn"><a href="http://www.thebootstrapthemes.com" target="_blank"><i class="fa fa-link"></i> View Website </a><br> <h5 class="fs-3"><h2>food cart delivery app</h2><br><p>user friendly resposive design</p><br><p>multi restorant can create their srores</p><br><p>cart and order management</p></h5></span></div></li>
+			<li><img alt="portfolio" src="images/grid-image/2.jpg"><div class="overlay animated fadeIn"><span class="animated fadeInDown"><a href="http://www.thebootstrapthemes.com" target="_blank"><i class="fa fa-link"></i> View Website</a></span></div></li>
+			<li><img alt="portfolio" src="images/grid-image/3.jpg"><div class="overlay animated fadeIn"><span class="animated fadeInUp"><a href="http://www.thebootstrapthemes.com" target="_blank"><i class="fa fa-link"></i> View Website</a></span></div></li>
+			<li><img alt="portfolio" src="images/grid-image/4.jpg"><div class="overlay animated fadeIn"><span class="animated bounceIn"><a href="http://www.thebootstrapthemes.com" target="_blank"><i class="fa fa-link"></i> View Website</a></span></div></li>
+			<li><img alt="portfolio" src="images/grid-image/5.jpg"><div class="overlay animated fadeIn"><span class="animated fadeInDown"><a href="http://www.thebootstrapthemes.com" target="_blank"><i class="fa fa-link"></i> View Website</a></span></div></li>
+			<li><img alt="portfolio" src="images/grid-image/6.jpg"><div class="overlay animated fadeIn"><span class="animated bounceIn"><a href="http://www.thebootstrapthemes.com" target="_blank"><i class="fa fa-link"></i> View Website</a></span></div></li>
+			<li><img alt="portfolio" src="images/grid-image/7.jpg"><div class="overlay animated fadeIn"><span class="animated bounceIn"><a href="http://www.thebootstrapthemes.com" target="_blank"><i class="fa fa-link"></i> View Website</a></span></div></li>
+		</ul>
+	</div>
+</div>
+
+
+<!-- works -->
 <!-- Skills Section -->
-<section id="skills" class="px-6 py-10 sm:py-20 bg-blue-100">
-    <div class="max-w-5xl mx-auto text-center">
-        <h3 class="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-green-900">My Skills</h3>
-        <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
-            <!-- Third row of skills (reversed) -->
-            <div class="p-6 bg-gradient-to-br from-green-300 to-blue-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">React</h4>
+<div id="skills" class="skills-bg spacer">
+    <div class="container">
+        <h2 class="center">Skills</h2>
+        <div class="row">
+            <!-- Skill 1 -->
+            <div class="col-sm-4 skill-item">
+                <div class="skill-icon animated bounceIn">
+                    <i class="bx bxl-react fa-4x"></i>
+                </div>
+                <h3>React.js</h3>
+                <p>Proficient in building modern, scalable, and dynamic web applications with React.js.</p>
             </div>
-            <div class="p-6 bg-gradient-to-br from-red-300 to-yellow-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">API</h4>
+            <!-- Skill 2 -->
+            <div class="col-sm-4 skill-item">
+                <div class="skill-icon animated bounceIn">
+                    <i class="bx bxl-python fa-4x"></i>
+                </div>
+                <h3>Python</h3>
+                <p>Experienced in backend development and data analysis using Python.</p>
             </div>
-            <div class="p-6 bg-gradient-to-br from-purple-300 to-pink-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">Shopify</h4>
+            <!-- Skill 3 -->
+            <div class="col-sm-4 skill-item">
+                <div class="skill-icon animated bounceIn">
+                    <i class="bx bxl-django fa-4x"></i>
+                </div>
+                <h3>Django</h3>
+                <p>Skilled in building secure, scalable, and maintainable web applications with Django.</p>
             </div>
-            <div class="p-6 bg-gradient-to-br from-blue-300 to-green-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">GitHub</h4>
-            </div>
-        
-            <!-- Second row of skills (reversed) -->
-            <div class="p-6 bg-gradient-to-br from-red-300 to-yellow-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">SQL</h4>
-            </div>
-            <div class="p-6 bg-gradient-to-br from-purple-300 to-pink-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">JQuery</h4>
-            </div>
-            <div class="p-6 bg-gradient-to-br from-blue-300 to-green-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">Django</h4>
-            </div>
-            <div class="p-6 bg-gradient-to-br from-yellow-300 to-red-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">Python</h4>
-            </div>
-        
-            <!-- First row of skills (reversed) -->
-            <div class="p-6 bg-gradient-to-br from-red-300 to-yellow-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">HTML & CSS</h4>
-            </div>
-            <div class="p-6 bg-gradient-to-br from-purple-300 to-pink-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">JavaScript</h4>
-            </div>
-            <div class="p-6 bg-gradient-to-br from-blue-300 to-green-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">Tailwind CSS</h4>
-            </div>
-            <div class="p-6 bg-gradient-to-br from-yellow-300 to-red-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                <h4 class="text-lg sm:text-2xl font-bold text-gray-800">Bootstrap</h4>
-            </div>
-        
-            <!-- Additional skill -->
-            
         </div>
-        
+        <div class="row">
+            <!-- Skill 4 -->
+            <div class="col-sm-4 skill-item">
+                <div class="skill-icon animated bounceIn">
+                    <i class="bx bxl-tailwind-css fa-4x"></i>
+                </div>
+                <h3>Tailwind CSS</h3>
+                <p>Expert in creating responsive and visually appealing designs using Tailwind CSS.</p>
+            </div>
+            <!-- Skill 5 -->
+            <div class="col-sm-4 skill-item">
+                <div class="skill-icon animated bounceIn">
+                    <i class="bx bxl-html5 fa-4x"></i>
+                </div>
+                <h3>HTML5</h3>
+                <p>Proficient in building semantic and accessible HTML5 structures for modern web apps.</p>
+            </div>
+            <!-- Skill 6 -->
+            <div class="col-sm-4 skill-item">
+                <div class="skill-icon animated bounceIn">
+                    <i class="bx bxl-css3 fa-4x"></i>
+                </div>
+                <h3>CSS3</h3>
+                <p>Skilled in creating visually appealing and dynamic UI designs with CSS3.</p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Skill 7 -->
+            <div class="col-sm-4 skill-item">
+                <div class="skill-icon animated bounceIn">
+                    <i class="bx bxl-javascript fa-4x"></i>
+                </div>
+                <h3>JavaScript</h3>
+                <p>Experienced in creating interactive and dynamic user interfaces with JavaScript.</p>
+            </div>
+            <!-- Skill 8 -->
+            <div class="col-sm-4 skill-item">
+                <div class="skill-icon animated bounceIn">
+                    <i class="bx bxl-jquery fa-4x"></i>
+                </div>
+                <h3>jQuery</h3>
+                <p>Efficient in using jQuery to simplify web development and enhance interactivity.</p>
+            </div>
+            <!-- Skill 9 -->
+            <div class="col-sm-4 skill-item">
+                <div class="skill-icon animated bounceIn">
+                    <i class="bx bxl-bootstrap fa-4x"></i>
+                </div>
+                <h3>Bootstrap</h3>
+                <p>Proficient in developing responsive and mobile-first web applications with Bootstrap.</p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Skill 10 -->
+            <div class="col-sm-4 skill-item">
+                <div class="skill-icon animated bounceIn">
+                    <i class="bx bxl-postgresql fa-4x"></i>
+                </div>
+                <h3>PostgreSQL</h3>
+                <p>Skilled in designing, managing, and querying relational databases using PostgreSQL.</p>
+            </div>
+        </div>
     </div>
-</section>
+</div>
 
-<!-- Contact Section -->
-<section id="contact" class="px-6 py-10 sm:py-20 bg-indigo-100">
-    <div class="max-w-5xl mx-auto text-center">
-        <h3 class="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-pink-900">Get in Touch</h3>
-        <form action="/submit_contact" method="POST" class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            <input type="text" name="name" placeholder="Your Name" class="p-3 sm:p-4 rounded-lg bg-white border border-gray-300 focus:outline-none">
-            <input type="email" name="email" placeholder="Your Email" class="p-3 sm:p-4 rounded-lg bg-white border border-gray-300 focus:outline-none">
-            <textarea name="message" placeholder="Your Message" rows="5" class="sm:col-span-2 p-3 sm:p-4 rounded-lg bg-white border border-gray-300 focus:outline-none"></textarea>
-            <button type="submit" class="sm:col-span-2 bg-gradient-to-r from-purple-400 to-blue-400 text-white py-3 rounded-lg hover:bg-blue-500 transition duration-300">Send Message</button>
-        </form>
-    </div>
-</section>
 
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const swiper = new Swiper('.swiper', {
-            loop: true,
-            spaceBetween: 30, // Adds gap between slides
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-        });
-    });
-</script>
+<!-- <div class="testimonials-bg">
+<div class="testimonials center spacer">
+	<div class="container">
+	<h2>Testimonials</h2>
+
+	<div id="carousel-testimonials" class="carousel slide" data-ride="carousel">
+
+	<div class="carousel-inner">	
+			<div class="item active animated bounceInRight">
+			<span class="animated slideInLeft"><img alt="portfolio" src="images/testimonials/1.jpg" width="100" class="img-circle"></span>
+			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+			<span>Canada</span>
+			</div>
+			<div class="item  animated bounceInRight">
+			<span class="animated slideInLeft"><img alt="portfolio" src="images/testimonials/1.jpg" width="100" class="img-circle"></span>
+			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+			<span>Canada</span>
+			</div>
+			<div class="item  animated bounceInRight">
+			<span class="animated slideInLeft"><img alt="portfolio" src="images/testimonials/1.jpg" width="100" class="img-circle"></span>
+			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+			<span>Canada</span>
+			</div>
+	</div>
+  	<a class="left arrow" href="#carousel-testimonials" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+  	<a class="right arrow" href="#carousel-testimonials" data-slide="next"><i class="fa fa-angle-right"></i></a>
+	</div>
+
+	</div>	
+</div>
+</div> -->
+
+
+
+
+
+
+
+
+</div>
+
+
+<!-- contact -->
+<div id="contact" class="footer center spacer">
+
+			
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-offset-3 col-sm-6 contact-form">		
+			<h3>Contact</h3>
+			<p>I am available for Freelancing work and collaboration.</p>
+			<form  >
+			<input type="text" name="form_name" class="form-control" placeholder="Name" >
+			<input type="email"  name="form_email" class="form-control" placeholder="Email">
+			<textarea name="form_message" class="form-control" placeholder="Message" rows="5"></textarea>
+			<input type="submit"  name="Submit" class="btn btn-primary btn-lg" value="Submit">
+			</form>
+			</div>
+		</div>
+
+		
+	</div>
+</div>
+<!-- contact -->
+
+
+<a href="#top" class="toTop scroll"><i class="fa fa-angle-up"></i></a>
+
+		
+		<!-- gridloading script -->
+		<script src="assets/gridloading/js/modernizr.custom.js"></script>
+		<script src="assets/gridloading/js/masonry.pkgd.min.js"></script>
+		<script src="assets/gridloading/js/imagesloaded.js"></script>
+		<script src="assets/gridloading/js/classie.js"></script>
+		<script src="assets/gridloading/js/AnimOnScroll.js"></script>
+		<!-- gridloading script -->
+
+
+		<script src="assets/scripts.js"></script>
+
+
 </body>
+
 </html>
