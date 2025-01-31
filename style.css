@@ -27,7 +27,7 @@ h3{font-weight:300;font-size: 35px;line-height:38px;margin-bottom:40px;}
 .spacer{padding: 100px 0;}
 .center{text-align: center;}
 
-.header-bg {background:url(images/header-bg1.jpg) center fixed;background-size:cover; }
+.header-bg {background:url(images/homebg.webp) center fixed;background-size:cover; }
 .header {background:rgba(0,0,0,0.8);position: absolute;top: 0;bottom: 0;left: 0;right: 0;}
 .fullpage .container{display:table; height:inherit;}
 .fullpage .absolute-center{display:table-cell;vertical-align: middle;}
@@ -58,11 +58,11 @@ h3{font-weight:300;font-size: 35px;line-height:38px;margin-bottom:40px;}
 
 
 
-.testimonials-bg{background:url(images/testimonial-bg.jpg) center fixed #000;background-size:cover;}
-.testimonials{background:rgba(0,0,0,0.9);color: #fff;}
+.testimonials-bg{background:url(images/2Qters.png) center fixed #000;background-size:cover;}
+.testimonials{background:rgba(41, 40, 40, 0.9);color: #fff;}
 .testimonials p{font-size: 26px;font-weight: 300;line-height: 35px;padding: 0 200px;}
 
-#carousel-testimonials .arrow{position: absolute;color: #fff;top: 12%;background:none;font-size:35px;: }
+#carousel-testimonials .arrow{position: absolute;color: #fff;top: 12%;background:none;font-size:35px; }
 #carousel-testimonials .arrow.left{left: 0;}
 #carousel-testimonials .arrow.right{right: 0;}
 
@@ -121,6 +121,7 @@ h3{font-weight:300;font-size: 35px;line-height:38px;margin-bottom:40px;}
 }
 .whatsapp-icon i {
 	padding: 5px;
+	border-radius: 50%;
 	color: white; /* Ensure the icon is white */
 }
 .whatsapp-icon:hover i {
@@ -159,16 +160,22 @@ border-radius: 5px;
 /* LinkedIn Gradient */
 .linkedin-gradient {
 padding: 5px;
+border-radius: 50%;
+
 }
 
 /* GitHub Gradient */
 .github-gradient {
 padding: 5px;
+border-radius: 50%;
+
 }
 
 /* CV Gradient */
 .cv-gradient {
 padding: 5px;
+border-radius: 50%;
+
 }
 
 
@@ -200,14 +207,119 @@ border-radius: 5px;
 /* Facebook Gradient */
 .facebook-icon {
 padding: 5px;
+border-radius: 50%;
 }
 
 /* Instagram Gradient */
 .instagram-icon {
 padding: 5px;
+border-radius: 50%;
+
 }
 
 /* Twitter Gradient */
 .twitter-icon {
 padding: 5px;
+border-radius: 50%;
+
+}
+
+
+.portfolio-section {
+    background: linear-gradient(145deg, #ffffff, #f7f7f7);
+    padding: 60px 0;
+    position: relative;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    color: #555;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+}
+
+.project-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-image-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.features-list {
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.features-list li {
+    margin: 5px 0;
+    color: #555;
+}
+
+.view-btn {
+    background: linear-gradient(90deg, #007bff, #00d4ff);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    animation: pulse 2s infinite;
+}
+
+.view-btn:hover {
+    background: linear-gradient(90deg, #0056b3, #0088c9);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
